@@ -1,9 +1,9 @@
-    const sendRequest = async (operation) => {
+const sendRequest = async (operation) => {
     const num1 = document.getElementById("num1").value;
     const num2 = document.getElementById("num2").value;
 
     try {
-        const response = await fetch(`${operation}?num1=${num1}&num2=${num2}`);
+        const response = await fetch(`/${operation}?num1=${num1}&num2=${num2}`);
         
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
